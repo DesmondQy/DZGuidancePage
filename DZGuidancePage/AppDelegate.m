@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "DZGuidancePageController.h"
+#import "DZGuidancePageCell.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +20,36 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"First"]) {//首次打开
+        [self starGuidancePageController];
+    }else{
+        UINavigationController *na = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
+        self.window.rootViewController = na;
+    }
+    
     return YES;
+}
+
+
+-(void)starGuidancePageController{
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"First"];
+    DZGuidancePageController *leadController = [[DZGuidancePageController alloc] initWithPagesCount:3 setupCellHandler:^(DZGuidancePageCell *cell, NSIndexPath *indexPath) {
+        // 设置图片
+        NSString *imageName = [NSString stringWithFormat:@"d%ld",indexPath.row];
+        cell.imageView.image = [UIImage imageNamed:imageName];
+        // 设置按钮属性
+        [cell.finishBtn setTitle:@"立即体验" forState:UIControlStateNormal];
+        [cell.finishBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    } finishHandler:^(UIButton *finishBtn) {
+        NSLog(@"点击了完成按钮-----");
+    }];
+    leadController.mPageControl.pageIndicatorTintColor = [UIColor yellowColor];
+    leadController.mPageControl.currentPageIndicatorTintColor = [UIColor purpleColor];
+    self.window.rootViewController = leadController;
 }
 
 

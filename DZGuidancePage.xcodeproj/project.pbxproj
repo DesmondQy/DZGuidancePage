@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C72BF021ECA86F40046874A /* DZGuidancePageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C72BF011ECA86F40046874A /* DZGuidancePageCell.m */; };
 		1C8B96DD1ECA84DF00CFAF74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8B96DC1ECA84DF00CFAF74 /* main.m */; };
 		1C8B96E01ECA84DF00CFAF74 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8B96DF1ECA84DF00CFAF74 /* AppDelegate.m */; };
 		1C8B96E31ECA84DF00CFAF74 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8B96E21ECA84DF00CFAF74 /* ViewController.m */; };
@@ -15,6 +16,7 @@
 		1C8B96EB1ECA84DF00CFAF74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8B96E91ECA84DF00CFAF74 /* LaunchScreen.storyboard */; };
 		1C8B96F61ECA84DF00CFAF74 /* DZGuidancePageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8B96F51ECA84DF00CFAF74 /* DZGuidancePageTests.m */; };
 		1C8B97011ECA84DF00CFAF74 /* DZGuidancePageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8B97001ECA84DF00CFAF74 /* DZGuidancePageUITests.m */; };
+		1C8B97111ECA85B200CFAF74 /* DZGuidancePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8B97101ECA85B200CFAF74 /* DZGuidancePageController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C72BF001ECA86F40046874A /* DZGuidancePageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZGuidancePageCell.h; sourceTree = "<group>"; };
+		1C72BF011ECA86F40046874A /* DZGuidancePageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZGuidancePageCell.m; sourceTree = "<group>"; };
 		1C8B96D81ECA84DF00CFAF74 /* DZGuidancePage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DZGuidancePage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8B96DC1ECA84DF00CFAF74 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1C8B96DE1ECA84DF00CFAF74 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		1C8B96FC1ECA84DF00CFAF74 /* DZGuidancePageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DZGuidancePageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8B97001ECA84DF00CFAF74 /* DZGuidancePageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZGuidancePageUITests.m; sourceTree = "<group>"; };
 		1C8B97021ECA84DF00CFAF74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C8B970F1ECA85B200CFAF74 /* DZGuidancePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZGuidancePageController.h; sourceTree = "<group>"; };
+		1C8B97101ECA85B200CFAF74 /* DZGuidancePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZGuidancePageController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		1C8B96DA1ECA84DF00CFAF74 /* DZGuidancePage */ = {
 			isa = PBXGroup;
 			children = (
+				1C8B970E1ECA854000CFAF74 /* DZGuidancePageConrroller */,
 				1C8B96DE1ECA84DF00CFAF74 /* AppDelegate.h */,
 				1C8B96DF1ECA84DF00CFAF74 /* AppDelegate.m */,
 				1C8B96E11ECA84DF00CFAF74 /* ViewController.h */,
@@ -138,6 +145,17 @@
 				1C8B97021ECA84DF00CFAF74 /* Info.plist */,
 			);
 			path = DZGuidancePageUITests;
+			sourceTree = "<group>";
+		};
+		1C8B970E1ECA854000CFAF74 /* DZGuidancePageConrroller */ = {
+			isa = PBXGroup;
+			children = (
+				1C8B970F1ECA85B200CFAF74 /* DZGuidancePageController.h */,
+				1C8B97101ECA85B200CFAF74 /* DZGuidancePageController.m */,
+				1C72BF001ECA86F40046874A /* DZGuidancePageCell.h */,
+				1C72BF011ECA86F40046874A /* DZGuidancePageCell.m */,
+			);
+			path = DZGuidancePageConrroller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +291,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C8B97111ECA85B200CFAF74 /* DZGuidancePageController.m in Sources */,
 				1C8B96E31ECA84DF00CFAF74 /* ViewController.m in Sources */,
+				1C72BF021ECA86F40046874A /* DZGuidancePageCell.m in Sources */,
 				1C8B96E01ECA84DF00CFAF74 /* AppDelegate.m in Sources */,
 				1C8B96DD1ECA84DF00CFAF74 /* main.m in Sources */,
 			);
@@ -509,6 +529,7 @@
 				1C8B97071ECA84DF00CFAF74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C8B97081ECA84DF00CFAF74 /* Build configuration list for PBXNativeTarget "DZGuidancePageTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +538,7 @@
 				1C8B970A1ECA84DF00CFAF74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C8B970B1ECA84DF00CFAF74 /* Build configuration list for PBXNativeTarget "DZGuidancePageUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +547,7 @@
 				1C8B970D1ECA84DF00CFAF74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
